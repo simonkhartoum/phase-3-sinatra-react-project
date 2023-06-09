@@ -23,6 +23,10 @@ GEM
     database_cleaner-core (2.0.1)
     diff-lcs (1.4.4)
     eventmachine (1.2.7)
+    faraday (2.7.6)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
     ffi (1.15.3)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
@@ -31,8 +35,13 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     method_source (1.0.0)
     minitest (5.14.4)
+    mpesarb (0.3.4)
+      activesupport (>= 5.0.0)
+      faraday (>= 2.0.1)
+      openssl (>= 2.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
+    openssl (3.1.0)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -66,6 +75,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
+    ruby-daraja (0.1.0.pre.alpha)
     ruby2_keywords (0.0.4)
     sinatra (2.1.0)
       mustermann (~> 1.0)
@@ -87,10 +97,12 @@ GEM
 
 PLATFORMS
   x86_64-darwin-19
+  x86_64-linux
 
 DEPENDENCIES
   activerecord (~> 6.1)
   database_cleaner (~> 2.0)
+  mpesarb
   pry (~> 0.14.1)
   rack-contrib (~> 2.3)
   rack-cors (~> 1.1)
@@ -100,6 +112,7 @@ DEPENDENCIES
   rerun
   rspec (~> 3.10)
   rspec-json_expectations (~> 2.2)
+  ruby-daraja (~> 0.1.0.pre.alpha)
   sinatra (~> 2.1)
   sinatra-activerecord (~> 2.0)
   sqlite3 (~> 1.4)
